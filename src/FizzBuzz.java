@@ -1,18 +1,19 @@
 
 public class FizzBuzz {
 
-	public static void main(String[] args) {
-        for (int number = 1; number <= 100; number++) {
-            if (number % 15 == 0) {
-                System.out.println("FizzBuzz");
-            } else if (number % 5 == 0) {
-                System.out.println("Buzz");
-            } else if (number % 3 == 0) {
-                System.out.println("Fizz");
-            } else {
-                System.out.println(number);
-            }
-        }
-    }
+	public String CalculateNumber(int x) {
+		int number = x;
+		String result = "";
+		if(x%3 == 0 && x%5 == 0) {
+			result = "FizzBuzz";
+		} else if(x%3 == 0) {
+			result = "Fizz";
+		}else if(x%5 == 0) {
+			result = "Buzz";
+		}else  {
+			result = ""+x;
+		}
+		return result;
+	}
 
 }
